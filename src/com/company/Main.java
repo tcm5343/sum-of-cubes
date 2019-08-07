@@ -12,14 +12,14 @@ public class Main {
 
         try {
             Scanner input = new Scanner(System.in);
-            System.out.println("Enter a number: ");
-            double num = input.nextDouble();
+            System.out.println("Enter a positive integer: ");
+            long num = Math.abs(input.nextLong());
             int sum = 0;
-            double remainder = num;
+            long remainder = num;
 
-            for (int i = 0; i < 9; i++) {
+            for (int i = 1; i <= 9; i++) { // 9 is the limit of cubes in LE Dickson's proof
 
-                System.out.println((int)getCBRT(remainder) + " cubed");
+                System.out.println(i + " cube: " + getCBRT(remainder));
 
                 double cube = Math.pow(getCBRT(remainder), 3); // cubes the cbrt
                 sum += cube; // adds the cube to the sum
@@ -30,14 +30,18 @@ public class Main {
             System.out.println("Sum: " + sum);
         } catch (Exception e) {
             System.out.println("Error: Invalid Input");
+            main(args);
         }
     }
 
-    private static double getCBRT(double num) {
+    private static long getCBRT(long num) {
+
         int highest = 0;
 
         // loop finds highest square root in the number and returns it
-            for (int j = 0; j < num; j++) {
+        // this is very inefficient for large numbers but it works for now
+        // todo run test to see if decrementing and doing Math.cbrt() is faster?
+            for (int j = 1; j <= num; j++) {
                 if (Math.pow(j, 3) <= num) {
                     highest = j;
                 }
