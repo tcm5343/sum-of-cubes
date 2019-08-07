@@ -12,12 +12,11 @@ public class Main {
 
             double num = input.nextDouble();
             int sum = 0;
+            double temp = num;
 
             for (int i = 0; i < 9; i++) {
 
-                double temp = num;
-
-                System.out.println((int)getCBRT(num) + " cubed");
+                System.out.println((int)getCBRT(temp) + " cubed");
 
                 sum += Math.pow(getCBRT(temp), 3); // cubes the cbrt and adds it to the sum
                 temp -= Math.pow(getCBRT(temp), 3); // cubes the cbrt and subtracts it from the sum
@@ -32,11 +31,9 @@ public class Main {
 
     }
 
-    static double getCBRT(double num) {
+    private static double getCBRT(double num) {
 
         int highest = 0;
-
-        for (int i = 1; i <= 9; i++) {
 
             for (int j = 0; j < num; j++) {
                 if (Math.pow(j, 3) <= num) {
@@ -49,8 +46,6 @@ public class Main {
             } else {
                 return highest;
             }
-        }
-        return highest;
     }
 
 }
