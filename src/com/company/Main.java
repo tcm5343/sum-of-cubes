@@ -27,7 +27,7 @@ public class Main {
 
                 if (sum == num) { break; } // checks if sum equals original number
             }
-            System.out.println("Sum: " + sum);
+            System.out.println("Sum of cubes: " + sum);
         } catch (Exception e) {
             System.out.println("Error: Invalid Input");
             main(args);
