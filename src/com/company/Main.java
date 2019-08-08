@@ -45,18 +45,14 @@ public class Main {
     }
 
     private static int getCBRT(int num) {
-
-        int highest = 0;
-
         // starts at the num and decrements until it finds a cbrt
             for (int i = num; i >= 0; i--) {
                 double temp = (double)i;
                 // checks if the cbrt is an integer
                 if (Math.cbrt(temp) % 1 == 0) {
                     return (int)Math.cbrt(temp); }
-                else { highest = 1; }
-            }
-            return highest;
+            } // end of for loop
+            return 1;
     }
 }
 
