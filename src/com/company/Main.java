@@ -6,6 +6,8 @@ import java.util.Scanner;
                                                 Author: @tcm5343
                                                 ***************/
 
+    // todo I would like to have it write to a file what the input is if (sum != num)
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,6 +18,7 @@ public class Main {
             int num = Math.abs(input.nextInt());
             int sum = 0;
             int remainder = num;
+            boolean proof = false;
 
             for (int i = 1; i <= 9; i++) { // 9 is the limit of cubes in LE Dickson's proof
 
@@ -28,8 +31,13 @@ public class Main {
                 if (sum == num) { break; } // checks if sum equals original number
                 else {  System.out.print(" + "); } // checks to see if a + is needed
             }
+            if (sum == num) { proof = true; }
+
             System.out.println();
             System.out.println("Sum of cubes: " + sum);
+            if (proof){ System.out.println("This proves LE Dickson's Theory"); }
+            else { System.out.println("This does not prove LE Dickson's Theory"); }
+
         } catch (Exception e) {
             System.out.println("Error: Invalid Input");
             main(args);
