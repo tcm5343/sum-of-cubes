@@ -19,14 +19,16 @@ public class Main {
 
             for (int i = 1; i <= 9; i++) { // 9 is the limit of cubes in LE Dickson's proof
 
-                System.out.println(i + " cube: " + getCBRT(remainder));
+                System.out.print(getCBRT(remainder) + " cubed");
 
                 double cube = Math.pow(getCBRT(remainder), 3); // cubes the cbrt
                 sum += cube; // adds the cube to the sum
                 remainder -= cube; // subtracts the cube from the sum
 
                 if (sum == num) { break; } // checks if sum equals original number
+                else {  System.out.print(" + "); } // checks to see if a + is needed
             }
+            System.out.println();
             System.out.println("Sum of cubes: " + sum);
         } catch (Exception e) {
             System.out.println("Error: Invalid Input");
@@ -44,7 +46,7 @@ public class Main {
             for (int j = 1; j <= num; j++) {
                 if (Math.pow(j, 3) <= num) {
                     highest = j;
-                }
+            }
             }
             // checks highest digit
             if (highest == 0) { return 1; }
