@@ -55,7 +55,7 @@ public class sumOfCubes {
                 cube = Math.pow(highestCBRT, 3); // cubes the cbrt
                 sum += cube; // adds the cube to the sum
                 remainder -= cube; // finds the remainder
-                count++; // count must be less than or equal to 9 to prove the theory
+                count+=2; // count must be less than or equal to 9 to prove the theory
             }
 
             cube = Math.pow(getCBRT(remainder), 3); // cubes the cbrt
@@ -82,9 +82,11 @@ public class sumOfCubes {
         System.out.println("Sum of cubes: " + sum);
         if (proof) {
             System.out.println("This proves LE Dickson's Theory");
+            System.out.println("");
             return true;
         } else {
             System.out.println("This does not prove LE Dickson's Theory");
+            System.out.println("");
             return false;
         }
     }
