@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="38672fef-b718-4560-8d29-2944eac86c5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sumOfCubes/META-INF/sumOfCubes.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sumOfCubes/META-INF/sumOfCubes.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/sumOfCubes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/sumOfCubes.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
